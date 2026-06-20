@@ -1566,7 +1566,7 @@
     </header>
 
     <!-- ============================================
-    HERO SECTION (WITH PROFILE PICTURE - YOUR FACE)
+    HERO SECTION (WITH PROFILE PICTURE)
     ============================================ -->
     <section class="hero">
         <div class="container">
@@ -1597,7 +1597,7 @@
     </section>
 
     <!-- ============================================
-    STATS SECTION (UPDATED: 4 References, 0 Projects)
+    STATS SECTION (UPDATED: 5 References)
     ============================================ -->
     <div class="stats-section" id="statsSection">
         <div class="stat-item fade-in">
@@ -1605,7 +1605,7 @@
             <div class="stat-label">Years Customer Service</div>
         </div>
         <div class="stat-item fade-in">
-            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-number" data-target="5">0</div>
             <div class="stat-label">Professional References</div>
         </div>
         <div class="stat-item fade-in">
@@ -1615,7 +1615,7 @@
     </div>
 
     <!-- ============================================
-    TESTIMONIAL CAROUSEL (7 slides)
+    TESTIMONIAL CAROUSEL (8 slides - added Gabriele)
     ============================================ -->
     <div class="carousel-section" id="testimonials">
         <div class="container">
@@ -1667,6 +1667,13 @@
                         <div class="quote-author">Chris Brennan</div>
                         <div class="quote-role">Coach, Ards Table Tennis Club</div>
                     </div>
+                    <!-- NEW: Gabriele Lizunaite testimonial -->
+                    <div class="carousel-slide">
+                        <div class="quote-icon">"</div>
+                        <blockquote>"Dominic stood out as a quick-learner, diligent, adaptable, and dependable team member. He has shown consistency of work quality, been attentive and proactive with on-shift tasks, and provided high-quality customer service. He displays a positive attitude, great teamwork, and communication with coworkers during busy periods, helping ensure smooth workflow."</blockquote>
+                        <div class="quote-author">Gabriele Lizunaite</div>
+                        <div class="quote-role">Acting Supervisor, Marketplace • Lancaster University</div>
+                    </div>
                 </div>
 
                 <div class="carousel-dots" id="carouselDots">
@@ -1677,6 +1684,7 @@
                     <button class="carousel-dot" data-index="4" aria-label="Go to slide 5"></button>
                     <button class="carousel-dot" data-index="5" aria-label="Go to slide 6"></button>
                     <button class="carousel-dot" data-index="6" aria-label="Go to slide 7"></button>
+                    <button class="carousel-dot" data-index="7" aria-label="Go to slide 8"></button>
                 </div>
             </div>
         </div>
@@ -2047,7 +2055,7 @@
             </div>
         </div>
 
-        <!-- References Section (4 references only) -->
+        <!-- References Section (Updated: 5 references) -->
         <div class="section-wrapper" id="references">
             <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">Professional References</h2>
@@ -2090,6 +2098,16 @@
                         <div class="ref-contact"><a href="mailto:Chris.Brennan02@libertymutual.com">Chris.Brennan02@libertymutual.com</a></div>
                         <div class="ref-type">Coach Reference</div>
                         <p style="margin-top:10px;font-size:0.85rem;color:#64748b;">Chris has known Dominic personally and has advised him informally on aspects of his university computing projects. He can speak to Dominic's motivation, discipline, and thoughtful approach to people and problems.</p>
+                    </div>
+
+                    <!-- NEW: Gabriele Lizunaite -->
+                    <div class="reference-card fade-in" onclick="openRefModal('Gabriele Lizunaite')">
+                        <div class="ref-name">Gabriele Lizunaite</div>
+                        <div class="ref-title">Acting Supervisor</div>
+                        <div class="ref-org">Marketplace, Lancaster University</div>
+                        <div class="ref-contact"><a href="mailto:lizunaig@lancaster.ac.uk">lizunaig@lancaster.ac.uk</a></div>
+                        <div class="ref-type">Professional Reference (Current Supervisor)</div>
+                        <p style="margin-top:10px;font-size:0.85rem;color:#64748b;">Gabriele is my Acting Supervisor at Marketplace. She has seen me deliver consistent, high-quality customer service and work effectively within the team during busy periods.</p>
                     </div>
                 </div>
                 <p style="margin-top:28px;font-size:0.85rem;color:#64748b;background:var(--testimonial-bg);padding:14px;border-radius:8px;transition:background 0.3s ease;" class="fade-in">
@@ -2243,6 +2261,28 @@
 
         Chris Brennan
         Coach, Ards Table Tennis Club`
+            },
+            'Gabriele Lizunaite': {
+                title: 'Acting Supervisor, Marketplace • Lancaster University',
+                letter: `To Whom It May Concern,
+
+        It is my pleasure to recommend Dominic Ka Yeung for any Food & Beverage role.
+
+        I am Gabriele Lizunaite, an Acting Supervisor at Marketplace in Lancaster University. I have been working for the University's Retail department for 2.5 years, during which I have worked with many ERS staff members, and Dominic Ka Yeung is one of the staff members that has really stood out to me.
+
+        I have been working with Dominic for half a year, and during this time he stood out as a quick-learner, and as a very diligent, adaptable, and dependable team member. Dominic has shown consistency of work quality through carrying out shift duties, being attentive and proactive with miscellaneous on-shift tasks, and providing high-quality customer service.
+
+        Additionally, Dominic has displayed a positive attitude, great teamwork, and communication with his coworkers during many busy working periods, helping ensure smooth workflow.
+
+        I am confident that Dominic would be a great fit for any Food & Beverage role. Not only will Dominic bring the kind of skills and personal qualities that you are looking for in an applicant, but will quickly become an asset to the team.
+
+        If you require any more information or specific examples please do not hesitate to contact me at lizunaig@lancaster.ac.uk.
+
+        Sincerely,
+
+        Gabriele Lizunaite
+        Acting Supervisor, Marketplace
+        Lancaster University`
             }
         };
 
@@ -2342,10 +2382,10 @@
         }
 
         // ============================================
-        // CAROUSEL FUNCTIONS (totalSlides = 7)
+        // CAROUSEL FUNCTIONS (totalSlides = 8)
         // ============================================
         var currentSlide = 0;
-        var totalSlides = 7;
+        var totalSlides = 8;
         var track = document.getElementById('carouselTrack');
         var dots = document.querySelectorAll('.carousel-dot');
         var prevBtn = document.getElementById('carouselPrev');
@@ -2418,7 +2458,7 @@
             }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
             fadeElements.forEach(function(el) { fadeObserver.observe(el); });
 
-            // Stats Counter (FIXED: no "+" on stats)
+            // Stats Counter
             var statsSection = document.getElementById('statsSection');
             var statNumbers = document.querySelectorAll('.stat-number');
             var statsAnimated = false;
@@ -2440,7 +2480,6 @@
                         if (progress < 1) {
                             requestAnimationFrame(updateCounter);
                         } else {
-                            // Show exact number - no "+" added
                             stat.textContent = target;
                         }
                     }
